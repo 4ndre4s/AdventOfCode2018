@@ -37,6 +37,4 @@ public class DayOne extends Puzzle{
         }
         return result;
     }
-
-
 }

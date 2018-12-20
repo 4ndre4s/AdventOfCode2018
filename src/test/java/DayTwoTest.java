@@ -32,8 +32,8 @@ public class DayTwoTest {
         //arrange
         String expectedResult = "12";
 
-        List<String> input = new ArrayList<>(Arrays.asList("abcdef", "bababc", "abbcde", "abcccd", "aabcdd", "abcdee"
-                , "ababab"));
+        List<String> input = new ArrayList<>(Arrays.asList("abcdef", "bababc", "abbcde", "abcccd", "aabcdd",
+                "abcdee", "ababab"));
 
         DayTwo dayTwo = new DayTwo("/home/andi/IdeaProjects/AdventOfCode2018/src/main/resources/fileDayTwo.txt");
         dayTwo.setLines(input);

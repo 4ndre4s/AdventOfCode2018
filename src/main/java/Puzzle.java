@@ -26,4 +26,6 @@ public abstract class Puzzle {
         return Files.readAllLines(Paths.get(fileLocation));
     }
 
+    public abstract String getResult();
+
 }

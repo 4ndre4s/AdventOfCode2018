@@ -26,11 +26,11 @@ public class DayTwo extends Puzzle {
                 }
             }
 
-            for (Map.Entry<Character, Integer> characterIntegerEntry : differentLettersInLine.entrySet()) {
-                if ((int) ((Map.Entry) characterIntegerEntry).getValue() == 2 && !foundAlreadyANumberThatAppearedTwice) {
+            for (Map.Entry<Character, Integer> letterThatAppearedInLine : differentLettersInLine.entrySet()) {
+                if ((int) ((Map.Entry) letterThatAppearedInLine).getValue() == 2 && !foundAlreadyANumberThatAppearedTwice) {
                     numberOfCharsAppearingTwice++;
                     foundAlreadyANumberThatAppearedTwice = true;
-                } else if ((int) ((Map.Entry) characterIntegerEntry).getValue() == 3 && !foundAlreadyANumberThatAppearedThreeTimes) {
+                } else if ((int) ((Map.Entry) letterThatAppearedInLine).getValue() == 3 && !foundAlreadyANumberThatAppearedThreeTimes) {
                     numberOfCharsAppearingThreeTimes++;
                     foundAlreadyANumberThatAppearedThreeTimes = true;
                 }
