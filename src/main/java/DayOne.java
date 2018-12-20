@@ -1,22 +1,14 @@
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.HashSet;
 import java.util.List;
 
-public class DayOne {
-    private List<String> lines;
+public class DayOne extends Puzzle{
 
     public DayOne (String fileLocation) {
-        try {
-            lines = readFileToList(fileLocation);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        super(fileLocation);
     }
 
     public int getResultOfPartOne() {
-        return sumUpElementsOfList(lines);
+        return sumUpElementsOfList(getLines());
     }
 
     public int getResultOfPartTwo() {
@@ -24,7 +16,7 @@ public class DayOne {
 
         int result = 0;
         while (true) {
-            for (String line : lines) {
+            for (String line : getLines()) {
                 result += Integer.parseInt(line);
                 if (!reachedFrequencies.add(result)) {
                     return result;
@@ -41,7 +33,5 @@ public class DayOne {
         return result;
     }
 
-    private List<String> readFileToList(String fileLocation) throws IOException {
-        return Files.readAllLines(Paths.get(fileLocation));
-    }
+
 }
