@@ -20,7 +20,8 @@ public class DayTwoTest {
         dayTwo.setLines(input);
 
         //act
-        int actualResult = dayTwo.getResultOfPartOne();
+        int actualResult = Integer.parseInt(dayTwo.getResult().getSolutionOfA());
+
 
         //assert
         assertThat("should return 0 for list without strings that appear exactly two or three times", actualResult,
@@ -39,7 +40,7 @@ public class DayTwoTest {
         dayTwo.setLines(input);
 
         //act
-        int actualResult = dayTwo.getResultOfPartOne();
+        int actualResult = Integer.parseInt(dayTwo.getResult().getSolutionOfA());
 
         //assert
         assertThat("should return 12 for list which contains 4 Letters appearing twice " +

@@ -1,5 +1,4 @@
 import java.util.HashSet;
-import java.util.List;
 
 public class DayOne extends Puzzle{
 
@@ -9,7 +8,7 @@ public class DayOne extends Puzzle{
 
     @Override
     protected int getResultOfPartOne() {
-        return sumUpElementsOfList(getLines());
+        return getLines().stream().mapToInt(Integer::parseInt).sum();
     }
 
     @Override
@@ -25,13 +24,5 @@ public class DayOne extends Puzzle{
                 }
             }
         }
-    }
-
-    private int sumUpElementsOfList(List<String> lines) {
-        int result = 0;
-        for (String line : lines) {
-            result += Integer.parseInt(line);
-        }
-        return result;
     }
 }

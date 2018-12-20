@@ -26,8 +26,10 @@ public abstract class Puzzle {
         return Files.readAllLines(Paths.get(fileLocation));
     }
 
-    public String getResult() {
-        return "Part one: " + getResultOfPartOne() + ", Part two: " + getResultOfPartTwo();
+    public Solution getResult() {
+        String solutionOfA = String.valueOf(getResultOfPartOne());
+        String solutionOfB = String.valueOf(getResultOfPartTwo());
+        return new Solution(solutionOfA, solutionOfB);
     }
 
     protected abstract int getResultOfPartOne();
