@@ -7,11 +7,16 @@ public class DayOne extends Puzzle{
         super(fileLocation);
     }
 
-    public int getResultOfPartOne() {
+    @Override
+    String getResult() {
+        return "Part one: " + getResultOfPartOne() + ", Part two: " + getResultOfPartTwo();
+    }
+
+    private int getResultOfPartOne() {
         return sumUpElementsOfList(getLines());
     }
 
-    public int getResultOfPartTwo() {
+    private int getResultOfPartTwo() {
         HashSet<Integer> reachedFrequencies = new HashSet<>();
 
         int result = 0;
