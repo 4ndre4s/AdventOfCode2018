@@ -8,7 +8,7 @@ public class DayOne extends Puzzle{
     }
 
     @Override
-    String getResult() {
+    public String getResult() {
         return "Part one: " + getResultOfPartOne() + ", Part two: " + getResultOfPartTwo();
     }
 
