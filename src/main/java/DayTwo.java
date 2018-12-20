@@ -7,8 +7,9 @@ public class DayTwo extends Puzzle {
         super(fileLocation);
     }
 
+
     @Override
-    public String getResult() {
+    protected int getResultOfPartOne() {
         int numberOfCharsAppearingTwice = 0;
         int numberOfCharsAppearingThreeTimes = 0;
 
@@ -37,6 +38,11 @@ public class DayTwo extends Puzzle {
             }
 
         }
-        return String.valueOf(numberOfCharsAppearingTwice * numberOfCharsAppearingThreeTimes);
+        return numberOfCharsAppearingTwice * numberOfCharsAppearingThreeTimes;
+    }
+
+    @Override
+    protected int getResultOfPartTwo() {
+        return 0;
     }
 }

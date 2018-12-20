@@ -8,15 +8,12 @@ public class DayOne extends Puzzle{
     }
 
     @Override
-    public String getResult() {
-        return "Part one: " + getResultOfPartOne() + ", Part two: " + getResultOfPartTwo();
-    }
-
-    private int getResultOfPartOne() {
+    protected int getResultOfPartOne() {
         return sumUpElementsOfList(getLines());
     }
 
-    private int getResultOfPartTwo() {
+    @Override
+    protected int getResultOfPartTwo() {
         HashSet<Integer> reachedFrequencies = new HashSet<>();
 
         int result = 0;

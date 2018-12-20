@@ -26,6 +26,12 @@ public abstract class Puzzle {
         return Files.readAllLines(Paths.get(fileLocation));
     }
 
-    public abstract String getResult();
+    public String getResult() {
+        return "Part one: " + getResultOfPartOne() + ", Part two: " + getResultOfPartTwo();
+    }
+
+    protected abstract int getResultOfPartOne();
+
+    protected abstract int getResultOfPartTwo();
 
 }
